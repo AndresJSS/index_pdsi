@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_1a9b2d4f1070058deb65efe80529f54d {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+    <div style="position: fixed; 
+            bottom: 20px; left: 50px; width: auto; height: auto;
+            z-index: 9999; font-size: 14px; color: black; font-weight: bold; text-align: center;">
+        Suriname | 2020 | 2do semestre (Jul - Dic)
+    </div>
+    
+    
+        <div style="position: fixed; 
+                bottom: 50px; left: 50px; width: 400px; height: 80px; 
+                z-index:9999; font-size:14px; text-align: center;">
+            <div style="font-weight: bold; text-align: left; margin-bottom: 5px;">Índice PDSI</div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                <span style="flex: 1; text-align: center;">1.6</span>
+                <span style="flex: 1; text-align: center;">3.1</span>
+                <span style="flex: 1; text-align: center;">4.6</span>
+                <span style="flex: 1; text-align: center;">6.1</span>
+                <span style="flex: 1; text-align: center;">7.6</span>
+                <span style="flex: 1; text-align: center;">9.1</span>
+                <span style="flex: 1; text-align: center;">10.7</span>
+            </div>
+            <div style="display: flex;">
+                <div style="flex: 1; height: 15px; background-color: #ffffff;"></div>
+                <div style="flex: 1; height: 15px; background-color: #fff7bc;"></div>
+                <div style="flex: 1; height: 15px; background-color: #fee391;"></div>
+                <div style="flex: 1; height: 15px; background-color: #fec44f;"></div>
+                <div style="flex: 1; height: 15px; background-color: #fe9929;"></div>
+                <div style="flex: 1; height: 15px; background-color: #e31a1c;"></div>
+                <div style="flex: 1; height: 15px; background-color: #800026;"></div>
+            </div>
+        </div>
+        
+    
+            <div class="folium-map" id="map_1a9b2d4f1070058deb65efe80529f54d" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_1a9b2d4f1070058deb65efe80529f54d = L.map(
+                "map_1a9b2d4f1070058deb65efe80529f54d",
+                {
+                    center: [4.134879554751133, -55.90526186430205],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 4,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_3784f9ddf34fd0ee16ab4d2d7b14d1a2 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
+            );
+        
+    
+            tile_layer_3784f9ddf34fd0ee16ab4d2d7b14d1a2.addTo(map_1a9b2d4f1070058deb65efe80529f54d);
+        
+    
+            var tile_layer_ffb41b0e8de7cc7009638c293974df90 = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/ee-ssanabriaandres/maps/463844428ee295872a1f92c324237269-d54bc93908b7e427fae4bf2511e598ff/tiles/{z}/{x}/{y}",
+                {"attribution": "Google Earth Engine", "detectRetina": false, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_ffb41b0e8de7cc7009638c293974df90.addTo(map_1a9b2d4f1070058deb65efe80529f54d);
+        
+    
+            var layer_control_54dc500a86c2e82f0cbc9edfe90f6a0f_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_3784f9ddf34fd0ee16ab4d2d7b14d1a2,
+                },
+                overlays :  {
+                    "Indice PDSI - Surina" : tile_layer_ffb41b0e8de7cc7009638c293974df90,
+                },
+            };
+            let layer_control_54dc500a86c2e82f0cbc9edfe90f6a0f = L.control.layers(
+                layer_control_54dc500a86c2e82f0cbc9edfe90f6a0f_layers.base_layers,
+                layer_control_54dc500a86c2e82f0cbc9edfe90f6a0f_layers.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_1a9b2d4f1070058deb65efe80529f54d);
+
+        
+</script>
+</html>

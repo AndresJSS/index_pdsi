@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_9552306099ebd99c06c1e96b7565abf5 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+    <div style="position: fixed; 
+            bottom: 20px; left: 50px; width: auto; height: auto;
+            z-index: 9999; font-size: 14px; color: black; font-weight: bold; text-align: center;">
+        Jamaica | 2018 | 1er semestre (Ene - Jun)
+    </div>
+    
+    
+        <div style="position: fixed; 
+                bottom: 50px; left: 50px; width: 400px; height: 80px; 
+                z-index:9999; font-size:14px; text-align: center;">
+            <div style="font-weight: bold; text-align: left; margin-bottom: 5px;">Índice PDSI</div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                <span style="flex: 1; text-align: center;">4.1</span>
+                <span style="flex: 1; text-align: center;">4.5</span>
+                <span style="flex: 1; text-align: center;">4.9</span>
+                <span style="flex: 1; text-align: center;">5.3</span>
+                <span style="flex: 1; text-align: center;">5.7</span>
+                <span style="flex: 1; text-align: center;">6.1</span>
+                <span style="flex: 1; text-align: center;">6.2</span>
+            </div>
+            <div style="display: flex;">
+                <div style="flex: 1; height: 15px; background-color: #ffffff;"></div>
+                <div style="flex: 1; height: 15px; background-color: #fff7bc;"></div>
+                <div style="flex: 1; height: 15px; background-color: #fee391;"></div>
+                <div style="flex: 1; height: 15px; background-color: #fec44f;"></div>
+                <div style="flex: 1; height: 15px; background-color: #fe9929;"></div>
+                <div style="flex: 1; height: 15px; background-color: #e31a1c;"></div>
+                <div style="flex: 1; height: 15px; background-color: #800026;"></div>
+            </div>
+        </div>
+        
+    
+            <div class="folium-map" id="map_9552306099ebd99c06c1e96b7565abf5" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_9552306099ebd99c06c1e96b7565abf5 = L.map(
+                "map_9552306099ebd99c06c1e96b7565abf5",
+                {
+                    center: [18.158231675005144, -77.31012363497385],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 4,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_66a8fe58431c562eb49c589a0cf0a9fa = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
+            );
+        
+    
+            tile_layer_66a8fe58431c562eb49c589a0cf0a9fa.addTo(map_9552306099ebd99c06c1e96b7565abf5);
+        
+    
+            var tile_layer_d8c3e9ee0fbe4c5d660b06ddbc94cd30 = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/ee-ssanabriaandres/maps/432b3a1025e08966a33cde121fbcecbc-be4739b25e7fe76c5c6ae757148602e1/tiles/{z}/{x}/{y}",
+                {"attribution": "Google Earth Engine", "detectRetina": false, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_d8c3e9ee0fbe4c5d660b06ddbc94cd30.addTo(map_9552306099ebd99c06c1e96b7565abf5);
+        
+    
+            var layer_control_af07b1dbd47c96c3757730ce1837c896_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_66a8fe58431c562eb49c589a0cf0a9fa,
+                },
+                overlays :  {
+                    "Indice PDSI - Jamaic" : tile_layer_d8c3e9ee0fbe4c5d660b06ddbc94cd30,
+                },
+            };
+            let layer_control_af07b1dbd47c96c3757730ce1837c896 = L.control.layers(
+                layer_control_af07b1dbd47c96c3757730ce1837c896_layers.base_layers,
+                layer_control_af07b1dbd47c96c3757730ce1837c896_layers.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_9552306099ebd99c06c1e96b7565abf5);
+
+        
+</script>
+</html>

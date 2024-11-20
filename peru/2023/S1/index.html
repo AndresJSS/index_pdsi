@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_65bdb690fb8cce7017affed97d50f2de {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+    <div style="position: fixed; 
+            bottom: 20px; left: 50px; width: auto; height: auto;
+            z-index: 9999; font-size: 14px; color: black; font-weight: bold; text-align: center;">
+        Peru | 2023 | 1er semestre (Ene - Jun)
+    </div>
+    
+    
+        <div style="position: fixed; 
+                bottom: 50px; left: 50px; width: 400px; height: 80px; 
+                z-index:9999; font-size:14px; text-align: center;">
+            <div style="font-weight: bold; text-align: left; margin-bottom: 5px;">Índice PDSI</div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                <span style="flex: 1; text-align: center;">-9.2</span>
+                <span style="flex: 1; text-align: center;">-5.9</span>
+                <span style="flex: 1; text-align: center;">-2.6</span>
+                <span style="flex: 1; text-align: center;">0.7</span>
+                <span style="flex: 1; text-align: center;">4.0</span>
+                <span style="flex: 1; text-align: center;">7.3</span>
+                <span style="flex: 1; text-align: center;">10.5</span>
+            </div>
+            <div style="display: flex;">
+                <div style="flex: 1; height: 15px; background-color: #ffffff;"></div>
+                <div style="flex: 1; height: 15px; background-color: #fff7bc;"></div>
+                <div style="flex: 1; height: 15px; background-color: #fee391;"></div>
+                <div style="flex: 1; height: 15px; background-color: #fec44f;"></div>
+                <div style="flex: 1; height: 15px; background-color: #fe9929;"></div>
+                <div style="flex: 1; height: 15px; background-color: #e31a1c;"></div>
+                <div style="flex: 1; height: 15px; background-color: #800026;"></div>
+            </div>
+        </div>
+        
+    
+            <div class="folium-map" id="map_65bdb690fb8cce7017affed97d50f2de" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_65bdb690fb8cce7017affed97d50f2de = L.map(
+                "map_65bdb690fb8cce7017affed97d50f2de",
+                {
+                    center: [-9.12390421990768, -74.39882606629666],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 4,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_ce82dacf40fdcaa7ddd529d157e956cb = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
+            );
+        
+    
+            tile_layer_ce82dacf40fdcaa7ddd529d157e956cb.addTo(map_65bdb690fb8cce7017affed97d50f2de);
+        
+    
+            var tile_layer_b352d1c460fc76db3c40aada0ef543ac = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/ee-ssanabriaandres/maps/0a89c289f79250edbe4d5f149cbb4f05-6dcc455f6cef6f21e30535a7bf2e4a78/tiles/{z}/{x}/{y}",
+                {"attribution": "Google Earth Engine", "detectRetina": false, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_b352d1c460fc76db3c40aada0ef543ac.addTo(map_65bdb690fb8cce7017affed97d50f2de);
+        
+    
+            var layer_control_f4e4ef133331a516bb2c44b551a6e299_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_ce82dacf40fdcaa7ddd529d157e956cb,
+                },
+                overlays :  {
+                    "Indice PDSI - Peru (" : tile_layer_b352d1c460fc76db3c40aada0ef543ac,
+                },
+            };
+            let layer_control_f4e4ef133331a516bb2c44b551a6e299 = L.control.layers(
+                layer_control_f4e4ef133331a516bb2c44b551a6e299_layers.base_layers,
+                layer_control_f4e4ef133331a516bb2c44b551a6e299_layers.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_65bdb690fb8cce7017affed97d50f2de);
+
+        
+</script>
+</html>

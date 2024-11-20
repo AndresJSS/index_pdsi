@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_142b9b074dc652ca0479c8e493925314 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+    <div style="position: fixed; 
+            bottom: 20px; left: 50px; width: auto; height: auto;
+            z-index: 9999; font-size: 14px; color: black; font-weight: bold; text-align: center;">
+        Saint Kitts and Nevis | 2020 | 1er semestre (Ene - Jun)
+    </div>
+    
+    
+        <div style="position: fixed; 
+                bottom: 50px; left: 50px; width: 400px; height: 80px; 
+                z-index:9999; font-size:14px; text-align: center;">
+            <div style="font-weight: bold; text-align: left; margin-bottom: 5px;">Índice PDSI</div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                <span style="flex: 1; text-align: center;">-3.0</span>
+                <span style="flex: 1; text-align: center;">-2.8</span>
+                <span style="flex: 1; text-align: center;">-2.6</span>
+                <span style="flex: 1; text-align: center;">-2.4</span>
+                <span style="flex: 1; text-align: center;">-2.2</span>
+                <span style="flex: 1; text-align: center;">-2.0</span>
+                <span style="flex: 1; text-align: center;">-2.0</span>
+            </div>
+            <div style="display: flex;">
+                <div style="flex: 1; height: 15px; background-color: #ffffff;"></div>
+                <div style="flex: 1; height: 15px; background-color: #fff7bc;"></div>
+                <div style="flex: 1; height: 15px; background-color: #fee391;"></div>
+                <div style="flex: 1; height: 15px; background-color: #fec44f;"></div>
+                <div style="flex: 1; height: 15px; background-color: #fe9929;"></div>
+                <div style="flex: 1; height: 15px; background-color: #e31a1c;"></div>
+                <div style="flex: 1; height: 15px; background-color: #800026;"></div>
+            </div>
+        </div>
+        
+    
+            <div class="folium-map" id="map_142b9b074dc652ca0479c8e493925314" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_142b9b074dc652ca0479c8e493925314 = L.map(
+                "map_142b9b074dc652ca0479c8e493925314",
+                {
+                    center: [17.272277080417982, -62.70168532506811],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 4,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_92d02de207ffabfde6426d479ffbf4e2 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
+            );
+        
+    
+            tile_layer_92d02de207ffabfde6426d479ffbf4e2.addTo(map_142b9b074dc652ca0479c8e493925314);
+        
+    
+            var tile_layer_2a1995c351d1642bbf0f1f3e9cd195de = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/ee-ssanabriaandres/maps/8f9d42c6a149a9017c7eee1977079add-b303d63559c5281d507b083acb090ed0/tiles/{z}/{x}/{y}",
+                {"attribution": "Google Earth Engine", "detectRetina": false, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_2a1995c351d1642bbf0f1f3e9cd195de.addTo(map_142b9b074dc652ca0479c8e493925314);
+        
+    
+            var layer_control_227d10ce5d162ca9b2f92274821530a1_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_92d02de207ffabfde6426d479ffbf4e2,
+                },
+                overlays :  {
+                    "Indice PDSI - Saint " : tile_layer_2a1995c351d1642bbf0f1f3e9cd195de,
+                },
+            };
+            let layer_control_227d10ce5d162ca9b2f92274821530a1 = L.control.layers(
+                layer_control_227d10ce5d162ca9b2f92274821530a1_layers.base_layers,
+                layer_control_227d10ce5d162ca9b2f92274821530a1_layers.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_142b9b074dc652ca0479c8e493925314);
+
+        
+</script>
+</html>
